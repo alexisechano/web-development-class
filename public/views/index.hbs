@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Web Dev by Alexis Echano, PD. 7</title>
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Poppins:500,700,800');
+
+            h1, h2, h3, h4, h5, h6, p, a 
+            {
+                 font-family: 'Poppins', sans-serif;
+                 color: white;
+            }
+            html, body {
+                width: 100%;
+                height: auto;
+                margin: 0px;
+                padding: 0px;
+                overflow-x: hidden; 
+            }
+    
+            .navbar-default 
+            {
+                background: none;
+      	        border: none;
+      	        justify-content: center;
+                float: none;
+                font-size: 24px;
+                
+            }
+            .header-site
+            {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.squarespace-cdn.com/content/56674fd5e0327c45f99cf7dd/1561055239241-SW2HOT2OX9FW1COF1MRO/vector+header.jpg?content-type=image%2Fjpeg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            .nav-color
+            {
+                color: white;
+            }
+            .navbar-item
+            {
+                padding-left:30px;
+                padding-right:30px;
+            }
+            .navbar-nav .nav-link:focus, .navbar-nav .nav-link:hover {
+                color: #bfaab4 !important;
+            }
+            .container-ehad h2{
+              font-size: 2.25em;
+              margin-top: 0;
+              margin-bottom: 0.5em;
+              color: white;
+              font-family: 'Poppins';
+            }
+            .hero-inner{
+              padding: 1%;
+            }
+            .hero-inner h2 span.typed-text {
+              font-weight: normal;
+              color: #bfaab4;
+              font-family: 'Poppins';
+            }
+            .hero-inner h2 span.cursor {
+              display: inline-block;
+              background-color: #ccc;
+              margin-left: 0.1rem;
+              width: 3px;
+              animation: blink 1s infinite;
+            }
+            .hero-inner h2 span.cursor.typing {
+              animation: none;
+            }
+            @keyframes blink {
+              0%  { background-color: #ccc; }
+              49% { background-color: #ccc; }
+              50% { background-color: transparent; }
+              99% { background-color: transparent; }
+              100%  { background-color: #ccc; }
+            }
+            :root {
+              --msg-content-height: 19em;
+              --msg-spacing: 0.75em;
+              --msg1-height: 5.5em;
+              --msg2-height: 4em;
+              --msg3-height: 2.5em;
+              --msg4-height: 2.5em;
+              --msg5-height: 4em;
+              --msg6-height: 3.25em;
+            }
+            .container-fun{
+                display: flex;
+                justify-content: center;
+            }
+            .container-fun img{
+                position: relative;
+            }
+          
+        </style>
+        
+    </head>
+    <header>
+        <div class = "header-site">
+        <nav class="navbar navbar-expand-lg navbar-default">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link nav-color mr-4" href="/facts">FACTS LAB</a>
+                    <a class="nav-item nav-link nav-color mr-4" href="/fun">FUN LAB</a>
+                    <a class="nav-item nav-link nav-color mr-4" href="/weather">WEATHER</a>
+                    <a class="nav-item nav-link nav-color mr-4" href="/formz">PET FORM</a>
+                    <a class="nav-item nav-link nav-color mr-4" href="/voter">VOTER</a>
+                    <a class="nav-item nav-link nav-color mr-4" href="/mapgame">MAP GAME</a>
+                    <a class="nav-item nav-link nav-color mr-4" href="/points">POINTS</a>
+                </div>
+        </nav>
+    
+    
+        <div class="container-ehad" style="height:250px;">
+            <div class="row mt-2 pt-5">
+                <div class="col text-center">
+                    <div class="hero-inner">
+                        <h1>alexis echano's web dev site.</h1>
+                        <h2>i'm working on <span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    
+<main>
+    
+    <div class="container container-fun">
+        <img src = "images/corgi.gif" alt = "">
+    </div>
+    
+    <script>
+        const typedTextSpan = document.querySelector(".typed-text");
+        const cursorSpan = document.querySelector(".cursor");
+
+        const textArray = ["fun form!", "weather lab!", "designing this site!", "studying!"];
+        const typingDelay = 100;
+        const erasingDelay = 50;
+        const newTextDelay = 1500; // Delay between current and next text
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+          if (charIndex < textArray[textArrayIndex].length) {
+            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+          } 
+          else {
+            cursorSpan.classList.remove("typing");
+            setTimeout(erase, newTextDelay);
+          }
+        }
+
+        function erase() {
+          if (charIndex > 0) {
+            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+          } 
+          else {
+            cursorSpan.classList.remove("typing");
+            textArrayIndex++;
+            if(textArrayIndex>=textArray.length) textArrayIndex=0;
+            setTimeout(type, typingDelay + 1100);
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+          if(textArray.length) setTimeout(type, newTextDelay + 250);
+        });
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</main>
+</html>

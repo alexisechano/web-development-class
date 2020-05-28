@@ -1,0 +1,138 @@
+
+html, body {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+    
+.container-map{
+    padding-top: 0.5%;
+    text-align: center;
+    justify-content: center;
+}
+.container-map h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Poppins', sans-serif;
+    color:black;
+}
+.toggle-legend{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.song-play{
+    margin-top: 100%;
+}
+.diag-box{
+    float: none;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40%;
+    position: absolute;
+    width:auto;
+    max-width: 75%; /* of the bootstrap column */
+    padding: 1em 1em;
+    border: 3px solid black;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.diag-box .btn {
+    color: inherit;
+    font-family: 'Poppins', sans-serif;
+    font-size: inherit;
+    background: white;
+    padding: 0.3rem 1.2rem;
+    border: 3px solid black;
+    margin-right: 2.6rem;
+    box-shadow: 0 0 0 black;
+    transition: all 0.2s;
+}
+
+.diag-box .btn:last-child {
+    margin: 0;
+}
+
+.diag-box .btn:hover {
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transform: translate(-0.4rem, -0.4rem);
+}
+
+.diag-box .btn:active {
+    box-shadow: 0 0 0 black;
+    transform: translate(0, 0);
+}
+.modal-game-starter {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    
+    padding: 3rem 3rem;
+    border: 3px solid black;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.message p{
+    font-size:1.1rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1.6rem;
+    margin-top: 0;
+}
+.modal-game-starter .btn {
+    color:inherit;
+    font-family: 'Poppins', sans-serif;
+    font-size: inherit;
+    background: white;
+    padding: 0.3rem 3.4rem;
+    border: 3px solid black;
+    margin-right: 2.6rem;
+    box-shadow: 0 0 0 black;
+    transition: all 0.2s;
+}
+
+.modal-game-starter .btn:last-child {
+    margin: 0;
+}
+
+.modal-game-starter .btn:hover {
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transform: translate(-0.4rem, -0.4rem);
+}
+
+.modal-game-starter .btn:active {
+    box-shadow: 0 0 0 black;
+    transform: translate(0, 0);
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.displayContainer_1 {
+    /*margin-right: 5%;*/
+    padding: 0;
+}
+
+.displayContainer_1 svg path {
+    fill: #AAA;
+    transition: fill .4s ease-out; 
+}
+ 
+
+.displayContainer_1 svg path:hover {
+    fill:#FFF;
+    stroke:black;
+    pointer-events:all;
+}

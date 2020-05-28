@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:500,700,800');
+
+            h1, h2, h3, h4, h5, h6, p, a, small
+            {
+                 font-family: 'Poppins', sans-serif;
+                 color: white;
+            }
+            html, body 
+            {
+                height: 100%;
+            }
+            .navbar-nav .nav-link:focus, .navbar-nav .nav-link:hover {
+                color: #bfaab4 !important;
+            }
+            .navbar-default 
+            {
+                background: none;
+      	        border: none;
+      	        justify-content: center;
+                float: none;
+                font-size: 24px;
+                
+            }
+            .navbar-pet 
+            {
+
+      	        justify-content: center;
+                font-size: 18px;
+                
+            }
+            .header-site
+            {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.squarespace-cdn.com/content/56674fd5e0327c45f99cf7dd/1561055239241-SW2HOT2OX9FW1COF1MRO/vector+header.jpg?content-type=image%2Fjpeg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            .container-head h1, h2, h3, h4, h5, h6, p, a, li, small
+            {
+                color: white;
+            }
+            .nav-color
+            {
+                color: white;
+            }
+            .navbar-item
+            {
+                padding-left:30px;
+                padding-right:30px;
+            }
+            .container h1, h2, h3, h4, h5, h6, p, a, li, small
+            {
+                color: black; 
+            }
+            .title-abt
+            {
+                margin-left: 12%;
+                margin-top: 5%;
+            }
+            .container-data{
+                padding-top: 5%;
+            }
